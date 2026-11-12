@@ -1,0 +1,43 @@
+<div
+    style="max-width: 400px; margin: 40px auto; padding: 20px; border: 1px solid #ccc; border-radius: 4px; font-family: sans-serif;">
+    <h2>Créer un compte</h2>
+
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+        <div style="margin-bottom: 15px;">
+            <label>Prénom</label><br>
+            <input type="text" formControlName="firstName" style="width: 100%; padding: 8px; box-sizing: border-box;">
+        </div>
+
+        <div style="margin-bottom: 15px;">
+            <label>Nom</label><br>
+            <input type="text" formControlName="lastName" style="width: 100%; padding: 8px; box-sizing: border-box;">
+        </div>
+
+        <div style="margin-bottom: 15px;">
+            <label>E-mail</label><br>
+            <input type="email" formControlName="email" style="width: 100%; padding: 8px; box-sizing: border-box;">
+        </div>
+
+        <div style="margin-bottom: 15px;">
+            <label>Mot de passe</label><br>
+            <input type="password" formControlName="password"
+                style="width: 100%; padding: 8px; box-sizing: border-box;">
+        </div>
+
+        <button type="submit" [disabled]="registerForm.invalid" style="width: 100%; padding: 10px; cursor: pointer;">
+            S'inscrire
+        </button>
+    </form>
+
+    <div *ngIf="successMessage" style="color: green; margin-top: 15px; font-weight: bold;">
+        {{ successMessage }}
+    </div>
+
+    <div *ngIf="errorMessage" style="color: red; margin-top: 15px;">
+        {{ errorMessage }}
+    </div>
+
+    <p style="margin-top: 20px; text-align: center;">
+        Déjà un compte ? <a routerLink="/login">Se connecter</a>
+    </p>
+</div>
