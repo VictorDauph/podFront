@@ -1,0 +1,49 @@
+.login-card {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: sans-serif;
+}
+
+.field {
+    margin-bottom: 15px;
+
+    label {
+        display: block;
+        margin-bottom: 4px;
+    }
+
+    input {
+        width: 100%;
+        padding: 8px;
+        box-sizing: border-box;
+    }
+}
+
+.field-error {
+    display: block;
+    margin-top: 4px;
+    color: red;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    cursor: pointer;
+
+    &:disabled {
+        cursor: not-allowed;
+    }
+}
+
+.form-error {
+    margin-top: 15px;
+    color: red;
+}
+
+.switch {
+    margin-top: 20px;
+    text-align: center;
+}
